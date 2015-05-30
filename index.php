@@ -192,7 +192,6 @@
     <meta name="description" content="Koukakaijin URL Shortener">
     <meta name="author" content="Koukakaijin">
     <link rel="stylesheet" href="assets/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/add.css">
 </head>
 
 <body>
