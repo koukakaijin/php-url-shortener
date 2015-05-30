@@ -1,0 +1,2 @@
+create table shortener ( id int(11) not null auto_increment, url varchar(255) collate utf8_unicode_ci not null, short varchar(255) collate utf8_unicode_ci not null, times int(11) not null default '1', primary key (id), unique key url (url), unique key short (short)) auto_increment=1;
+ALTER TABLE shortener ADD uses int(11) not null default '1';
