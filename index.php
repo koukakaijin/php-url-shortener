@@ -1,7 +1,7 @@
 <?php
 	//ddbb config file
 	require("config");
-	$myDomain = 'kou.no-ip.biz/';
+	$myDomain = 'domain.com?id=';
 	function encode($id)
 	{
 		$alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-';
