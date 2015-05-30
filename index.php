@@ -1,6 +1,6 @@
 <?php
 	//ddbb config file
-	require("config.php");
+	require("config");
 	$myDomain = 'kou.no-ip.biz/';
 	function encode($id)
 	{
