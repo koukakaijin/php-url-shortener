@@ -213,7 +213,7 @@
 				</div>
 			
 				<?php echo empty($urlData['short']) ? '' : '<div class="col-xs-12 col-sm-6 col-lg-4"><label>This is your url</label>'; ?>
-				<?php echo empty($urlData['short']) ? '' : '<input class="form-control" value="'.$myDomain.$urlData['short'].'" type="text" /></div>';?>
+				<?php echo empty($urlData['short']) ? '' : '<input class="form-control" value="'.$myDomain.$urlData['short'].'" type="text" onfocus="this.select();" onmouseup="return false;" autofocus/></div>';?>
 				
 			</div>
 		</div>
