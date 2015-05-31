@@ -236,7 +236,7 @@
 						break;
 				}
 			?>
-			<label><?php echo "$human2"." + "."$human3"." = ?"?></label>
+			<label><?php echo $human2." ".$human4." ".$human3." = ?"?></label>
 			<div class ="row">
 				<div class="col-xs-12 col-sm-6 col-lg-4">	
 					<input class="form-control" type="text" name="human" value="" /> 
