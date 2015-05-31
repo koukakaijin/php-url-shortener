@@ -221,7 +221,20 @@
 			<?php
 				$human2=rand(1,6);
 				$human3=rand(1,6);
-				$human1=$human2+$human3;
+				$math = array('+','-','*');
+				shuffle($math);
+				$human4=$math[0];
+				switch($human4){
+					case "+":
+						$human1=$human2+$human3;
+						break;
+					case "-":
+						$human1=$human2-$human3;
+						break;
+					case "*":
+						$human1=$human2*$human3;
+						break;
+				}
 			?>
 			<label><?php echo "$human2"." + "."$human3"." = ?"?></label>
 			<div class ="row">
