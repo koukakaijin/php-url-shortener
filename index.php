@@ -36,6 +36,10 @@
 				
 			$conn = new mysqli($db_host, $db_username, $db_password, $db_dbname);
 			$url = $_POST['url'];
+			//remove last char if it is a "/"
+			if (substr($url, -1)=="/"){
+				$url = substr($url, 0, -1);
+			}
 			// Check connection
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
