@@ -140,8 +140,12 @@
 	if (!$datos){
 		//nada
 	}else{
+		//if last char is "+" redirect go info page.
+		if (substr($_GET['id'], -1)=="$"){
+			header("Location:  info.php?id=".$id);
+			die();
+		}
 		$id = preg_replace("/[^a-zA-Z0-9-_]/", "", $id);
-		
 		$conn = new mysqli($db_host, $db_username, $db_password, $db_dbname);
 		// Check connection
 		if ($conn->connect_error) {
