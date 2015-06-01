@@ -140,9 +140,10 @@
 	if (!$datos){
 		//nada
 	}else{
-		//if last char is "+" redirect go info page.
-		if (substr($_GET['id'], -1)=="$"){
-			header("Location:  info.php?id=".$id);
+		//if last char is "$" redirect go info page.
+		if (substr($id, -1)=="$"){
+			$id = substr($id, 0, -1);
+			header("Location:  info?id=".$id);
 			die();
 		}
 		$id = preg_replace("/[^a-zA-Z0-9-_]/", "", $id);
