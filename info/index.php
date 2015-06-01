@@ -1,5 +1,5 @@
 <?php
-	require("config.php");
+	require("../config.php");
 	function decode($str, $base=64, $chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-') {
 		$len = strlen($str);
 		$val = 0;
@@ -60,8 +60,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Koukakaijin URL Shortener info page">
     <meta name="author" content="Koukakaijin">
-    <link rel="stylesheet" href="assets/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/add.css">
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/add.css">
 </head>
 
 <body>
