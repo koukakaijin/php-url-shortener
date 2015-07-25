@@ -10,4 +10,5 @@ basic info page.
 "config" file required in index.php and info.php should have the ddbb connection settings.  
 "mysql commands" file contains the scripts to create the tables necessary to use this example.
 
-Live example can be tested in http://kou.no-ip.biz
+Adding the character "$" at the emd of a shortened url allow you to visit the info page.
+Info page now load a preview of the target page in a iframe.
