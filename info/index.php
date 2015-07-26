@@ -67,20 +67,22 @@
 <body>
 
 <div class="container">
-	<?php echo "<p class='text-danger'>$errLoad</p>";?>
-    <h1>Information about an URL</h1> <br /><br />
-	<?php if ($errLoad==""){echo "<p class='text-info'>Original url: <b>$url</b></p>";}?>
-    <?php if ($errLoad==""){echo "<p class='text-info'>Shortened link: <b>$short</b></p>";}?>
-    <?php if ($errLoad==""){echo "<p class='text-info'>Number of times used: <b>$uses</b></p>";}?>
-    <?php if ($errLoad==""){echo "<p class='text-info'>Number of times shortened: <b>$times</b></p>";}?>
-	<div id="wrap">
-	<h2>URL Preview</h2> <br />
-		<?php if (strpos($url, 'http://') !== false || strpos($url, 'https://') !== false){
-				echo "<iframe id=frame src=$url ></iframe>";
-			}else{
-				$url = "http://$url";
-				echo "<iframe id=frame src=$url ></iframe>";
-			}?>
+	<?php echo "<br /><h1 class='text-danger'>$errLoad</h1>";
+    if ($errLoad==""){
+		echo "<h1>Information about an URL</h1> <br /><br />".	
+		"<p class='text-info'>Original url: <b>$url</b></p>".
+		"<p class='text-info'>Shortened link: <b>$short</b></p>".
+		"<p class='text-info'>Number of times used: <b>$uses</b></p>".
+		"<p class='text-info'>Number of times shortened: <b>$times</b></p>".
+		"<div id=wrap>".
+		"<h2>URL Preview</h2> <br />";
+		if (strpos($url, 'http://') !== false || strpos($url, 'https://') !== false){
+			echo "<iframe id=frame src=$url ></iframe>";
+		}else{
+			$url = "http://$url";
+			echo "<iframe id=frame src=$url ></iframe>";
+		}
+	}?>
 	</div>
 </div>
 
