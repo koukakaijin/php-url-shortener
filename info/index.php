@@ -61,6 +61,7 @@
     <meta name="description" content="Koukakaijin URL Shortener info page">
     <meta name="author" content="Koukakaijin">
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/add.css">
 </head>
 
 <body>
@@ -72,6 +73,15 @@
     <?php if ($errLoad==""){echo "<p class='text-info'>Shortened link: <b>$short</b></p>";}?>
     <?php if ($errLoad==""){echo "<p class='text-info'>Number of times used: <b>$uses</b></p>";}?>
     <?php if ($errLoad==""){echo "<p class='text-info'>Number of times shortened: <b>$times</b></p>";}?>
+	<div id="wrap">
+	<h2>URL Preview</h2> <br />
+		<?php if (strpos($url, 'http://') !== false || strpos($url, 'https://') !== false){
+				echo "<iframe id=frame src=$url ></iframe>";
+			}else{
+				$url = "http://$url";
+				echo "<iframe id=frame src=$url ></iframe>";
+			}?>
+	</div>
 </div>
 
 </body>
